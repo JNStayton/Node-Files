@@ -1,3 +1,7 @@
+## __Open index.html to see the terminal commands to test the code__
+
+# Exercise Instructions:
+
 ## Step 0
 - Run npm init to create a node project inside the project folder
 - Create a git repository in your project folder
