@@ -9,9 +9,11 @@ function cat(path, outputFile) {
 			console.log('ERROR:', err);
 			process.exit(1);
 		} else {
-			console.log('DATA:', data);
 			if (outputFile) {
 				catWrite(data, outputFile);
+				console.log(`${outputFile} now contains: ${data}`);
+			} else {
+				console.log(data);
 			}
 		}
 	});
@@ -21,9 +23,11 @@ function cat(path, outputFile) {
 async function webCat(url, outputFile) {
 	try {
 		let response = await axios.get(url);
-		console.log(response.data);
 		if (outputFile) {
 			catWrite(response.data, outputFile);
+			console.log(`${outputFile} now contains: ${url} HTML`);
+		} else {
+			console.log(response.data);
 		}
 	} catch (err) {
 		console.log(`ERROR WITH ${url}:`);
@@ -41,8 +45,6 @@ function catWrite(data, outputFile) {
 				process.exit(1);
 			}
 		});
-	} else {
-		console.log(data);
 	}
 }
 
