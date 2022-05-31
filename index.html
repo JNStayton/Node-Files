@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Fun Time</title>
+</head>
+<body>
+    <h2>Open this directory in the terminal, and run the following bolded commands:</h2>
+    <ul>
+        <h3>Part 1: step1.js can read the contents of a local path, or return an error message if nonexistent.</h3>
+
+        <li><b>'node step1.js one.txt'</b> - This should return the contents of one.txt</li>
+        <li><b>'node step1.txt blah.txt'</b> - This should return an error message</li>
+
+        <h3>Part 2: step2.js can differentiate between a URL and local path, or return an error message is the path or URL does not exist</h3>
+
+        <li><b>'node step2.js one.txt'</b> - This should return the contents of one.txt ("This is file one."</li>
+        <li><b>'node step2.js http://google.com'</b> - This should return the HTML for google.com</li>
+        <li><b>'node step2.js http://blah.com/i-am-fake'</b> - This should return an error message</li>
+
+        <h3>Part 3: step3.js can do both step1 and step2, but can also accept '--out' as the first command line argument to optionally write over one path with a second given path. The command line argument should look like this: '--out output-filename.txt readfile-or-url'</h3>
+
+        <li><b>'node step3.js one.txt'</b> - This should return the contents of one.txt</li>
+        <li><b>'node step2.js http://google.com'</b> - This should return the HTML for google.com</li>
+        <li><b>'node step3.js --out new.txt one.txt'</b> - new.txt now contains the contents of one.txt</li>
+        <li><b>'node step3.js --out new.txt http://google.com'</b> - new.txt now contains the HTML for google.com</li>
+        <li><b>'node step3.js --out /i/do/not/exist.txt one.txt'</b> - This should return an error message</li>
+
+    </ul>
+</body>
+</html>
