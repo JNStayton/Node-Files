@@ -1,4 +1,4 @@
-## __Open index.html to see the terminal commands to test the code__
+__Open index.html to see the terminal commands to test the code__
 
 # Exercise Instructions:
 
